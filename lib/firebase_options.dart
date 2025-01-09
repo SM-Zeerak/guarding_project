@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -46,30 +49,22 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDTlmGdV-Ia1QE-_sHfRNWA0d9wLzLdv3o',
-    appId: '1:1025422515266:web:70d92e6d038fc6130ca1db',
-    messagingSenderId: '1025422515266',
-    projectId: 'testing-1d69b',
-    authDomain: 'testing-1d69b.firebaseapp.com',
-    storageBucket: 'testing-1d69b.firebasestorage.app',
-    measurementId: 'G-0ZK9HMT6ZW',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA8Wpvw13rT6anVedsQKAunPu8-tM4OMrs',
-    appId: '1:1025422515266:android:0fcf4a69aa22285c0ca1db',
-    messagingSenderId: '1025422515266',
-    projectId: 'testing-1d69b',
-    storageBucket: 'testing-1d69b.firebasestorage.app',
+    apiKey: 'AIzaSyAVWONfkFxNn8T2duiOyA0J3Jj2HtFanjQ',
+    appId: '1:538649260345:android:c6bdf802f36aa3726c78e8',
+    messagingSenderId: '538649260345',
+    projectId: 'tiptipshine',
+    storageBucket: 'tiptipshine.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAm-tVOBafPswhBv_rdtHx7OMVQuZoxO4Y',
-    appId: '1:1025422515266:ios:d3e83ae3b1fba80d0ca1db',
-    messagingSenderId: '1025422515266',
-    projectId: 'testing-1d69b',
-    storageBucket: 'testing-1d69b.firebasestorage.app',
-    iosBundleId: 'com.example.guardingProject',
+    apiKey: 'AIzaSyC25brPR-MUOlsm3UzUZm_iQAv9nGygoiM',
+    appId: '1:538649260345:ios:3813f1555acf512d6c78e8',
+    messagingSenderId: '538649260345',
+    projectId: 'tiptipshine',
+    storageBucket: 'tiptipshine.appspot.com',
+    androidClientId: '538649260345-15u1nmok4h1srfi7ffmcndrh4tqlc9id.apps.googleusercontent.com',
+    iosClientId: '538649260345-jpncchn07ns798rhegj0ps12i138np57.apps.googleusercontent.com',
+    iosBundleId: 'com.example.karachiEducation',
   );
 }
